@@ -16,7 +16,7 @@ public class GreetingController {
 	
 	@RequestMapping("/greeting")
 	public HttpEntity<Greeting> greeting(
-			@RequestParam(value = "name", required = false, defaultValue = "maoyi") String name){
+			@RequestParam(value = "name", required = false, defaultValue = "jiangchuan") String name){
 		Greeting greeting = new Greeting(String.format(TEMPLATE, name));
 		greeting.add(linkTo(methodOn(GreetingController.class).greeting(name)).withSelfRel());
 		
